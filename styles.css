@@ -4,7 +4,15 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    margin: 0;
+    background-color: #151515;
+}
+
+header {
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
     background-color: #151515;
 }
 
@@ -20,6 +28,10 @@ h1 {
 h2 {
     font-weight: 500;
 }
+
+* {
+    scroll-margin-top: 100px;
+  }
 
 .green-color {
     color: #3FEA8A;
@@ -192,22 +204,25 @@ section {
 }
 
 .portfolio-div {
-    height: 700px;
-    background-image: url('/assets/images/woldecode.png');
-    background-size: contain;
+    height: 0;
+    padding-bottom: 75.27%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-image: url('/assets/images/woldecode.png');
 }
 
 .tenant-div {
-    height: 700px;
-    background-image: url('/assets/images/elev_tenant_app.png');
-    background-size: contain;
+    height: 0;
+    padding-bottom: 75.27%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-image: url('/assets/images/elev_tenant_app.png');
 }
 
 .host-div {
-    height: 700px;
-    background-image: url('/assets/images/elev_host_app.png');
-    background-size: contain;
+    height: 0;
+    padding-bottom: 75.27%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-image: url('/assets/images/elev_host_app.png');
 }
