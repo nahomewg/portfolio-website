@@ -1,8 +1,10 @@
-html, body {
-    height: 100%;
-    width: 100%;
+html {
     color: white;
     font-family: 'Poppins';
+}
+
+body {
+    min-height: 100vh;
     background-color: #151515;
 }
 
@@ -54,14 +56,16 @@ h2 {
     width: 60%;
     margin: auto;
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 500px) {
         width: 100% !important;
-        padding: 0px 50px !important;
     }
 }
 
 section {
     margin: 150px 0px;
+    @media screen and (max-width: 500px) {
+        padding: 0px 20px;
+    }
 }
 
 .avatar {
@@ -85,13 +89,13 @@ section {
     margin: 10px 0px;
 
     .text-1 {
-        color: #FFEA9F;
+        color: #3FEA8A;
     }
     .text-2 {
-        color: #FFBBC3;
+        color: #F0D83A;
     }
     .text-3 {
-        color: #B6FBFF;
+        color: #F55D67;
     }
   }
 
