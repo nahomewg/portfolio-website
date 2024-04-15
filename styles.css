@@ -1,4 +1,6 @@
 html, body {
+    height: 100%;
+    width: 100%;
     color: white;
     font-family: 'Poppins';
     background-color: #151515;
@@ -13,8 +15,13 @@ h1 {
     font-size: 36px;
 }
 
-.menu-grid {
-    display: grid;
+h2 {
+    font-weight: 500;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
 }
 
 .menu-items {
@@ -23,15 +30,34 @@ h1 {
     list-style-type: none;
     justify-content: center;
 
+    @media screen and (max-width: 500px) {
+        margin: 0;
+        width: 100%;
+        display: block;
+    }
+
     li {
         cursor: pointer;
         margin: 5px 25px;
+        @media screen and (max-width: 500px) {
+            margin: 0;
+            display: flex;
+            border: 1px solid white;
+            justify-content: center;
+        }
     }
+
+    
 }
 
 .main-container {
     width: 60%;
     margin: auto;
+
+    @media screen and (max-width: 750px) {
+        width: 100% !important;
+        padding: 0px 50px !important;
+    }
 }
 
 section {
@@ -71,6 +97,7 @@ section {
 
   .flex-center {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
   }
 
@@ -105,4 +132,31 @@ section {
     p {
         font-size: 16px;
     }
+  }
+
+  .progress-line {
+    padding: 0px 0px 0px 35px;
+  }
+
+  .progress-line > li {
+    /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+    position: relative;
+    /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+    margin: 0;
+    padding-bottom: 1em;
+    padding-left: 20px;
+  }
+
+  .progress-line > li::before {
+    background-color: white;
+    width: 2px;
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -21px;
+  }
+
+  .progress-line > li::marker {
+    font-size: 25px;
   }
