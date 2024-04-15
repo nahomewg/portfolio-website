@@ -127,7 +127,6 @@ section {
 }
 
 .large-grey-pill {
-    cursor: pointer;
     padding: 6px 10px;
     border-radius: 25px;
     border: #717171 1px solid;
@@ -141,7 +140,6 @@ section {
 }
 
 .small-grey-pill {
-    cursor: pointer;
     padding: 6px 10px;
     border-radius: 25px;
     border: #717171 1px solid;
@@ -191,4 +189,25 @@ section {
     height: 5px;
     margin-top: 10px;
     background-color: #F0D83A;
+}
+
+.portfolio-div {
+    height: 700px;
+    background-image: url('/assets/images/woldecode.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tenant-div {
+    height: 700px;
+    background-image: url('/assets/images/elev_tenant_app.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.host-div {
+    height: 700px;
+    background-image: url('/assets/images/elev_host_app.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
