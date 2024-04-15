@@ -1,0 +1,108 @@
+html, body {
+    color: white;
+    font-family: 'Poppins';
+    background-color: #151515;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.menu-grid {
+    display: grid;
+}
+
+.menu-items {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+
+    li {
+        cursor: pointer;
+        margin: 5px 25px;
+    }
+}
+
+.main-container {
+    width: 60%;
+    margin: auto;
+}
+
+section {
+    margin: 150px 0px;
+}
+
+.avatar {
+    background-image: url('/assets/images/nahome.png');
+    
+    /* make a square container */
+    width: 100px;
+    height: 100px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+  }
+
+  .about-me {
+    margin: 10px 0px;
+
+    .text-1 {
+        color: #FFEA9F;
+    }
+    .text-2 {
+        color: #FFBBC3;
+    }
+    .text-3 {
+        color: #B6FBFF;
+    }
+  }
+
+  .flex-center {
+      display: flex;
+      align-items: center;
+  }
+
+  .gap-5 {
+    gap: 5px;
+  }
+
+  .gap-10 {
+    gap: 10px;
+  }
+
+  .work-pill {
+    margin-top: 4px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    background-color: #BEDBFE;
+    p {
+        color: #1F3A8A;
+        font-size: 12px;
+    }
+  }
+
+  .large-grey-pill {
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 25px;
+    border: #717171 1px solid;
+    background-color: #2E2E2E;
+    img {
+        height: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+  }
