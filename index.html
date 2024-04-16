@@ -2,9 +2,412 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WoldeCode - Cutting-edge web solutions.</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
+
+  <!-- Header component, housing the links different sections of the portfolio webpage. -->
+  <header>
+    <div class="menu">
+        <ul class="menu-items">
+            <li onclick="toSection('aboutMe')">About me</li>
+            <li onclick="toSection('education')">Education</li>
+            <li onclick="toSection('experience')">Experience</li>
+            <li onclick="toSection('projects')">Projects</li>
+        </ul>
+    </div>
+  </header>
+
+  <!-- Body component, housing the content of the entire web page. -->
   <body>
+    <!-- Main container, housing the width of the entire web page. -->
+    <div class="main-container">
+        <!-- About me section. -->
+        <section id="aboutMe">
+            <div class="avatar"></div>
+            <div class="flex-center gap-10">
+                <h1>Hey, I am Nahome</h1>
+                <h2 style="margin-top: 4px;">&#127466&#127481</h2>
+                <div class="work-pill">
+                    <p>Open to work</p>
+                </div>
+            </div>
+            <p class="about-me">
+                <span class="green-color">Dynamic and innovative Software Developer with a passion for delivering cutting-edge solutions. </span>
+                <span class="yellow-color">Passionate Full-Stack Web Developer and Designer. </span>
+                <span class="red-color">Driven by technological excellence and client satisfaction.</span>
+            </p>
+            <div class="flex-center gap-10">
+                <div class="large-grey-pill" style="cursor: pointer;" onclick="openLink('https://www.linkedin.com/in/nahomewg/')">
+                    <div class="flex-center gap-5">
+                        <img src="./assets/icons/linkedin.png">
+                        <p>LinkedIn</p>
+                    </div>
+                </div>
+                <div class="large-grey-pill" style="cursor: pointer;" onclick="openLink('https://github.com/nahomewg')">
+                    <div class="flex-center gap-5">
+                        <img src="./assets/icons/github.png">
+                        <p>GitHub</p>
+                    </div>
+                </div>
+                <div class="large-grey-pill" style="cursor: pointer;" onclick="sendEmail('nwgiorgis@gmail.com')">
+                    <div class="flex-center gap-5">
+                        <img src="./assets/icons/email.png">
+                        <p>nwgiorgis@gmail.com</p>
+                    </div>
+                </div>
+                <div class="large-grey-pill" style="cursor: pointer;" onclick="openResume()">
+                    <div class="flex-center gap-5">
+                        <img src="./assets/icons/resume.png">
+                        <p>CV</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education section -->
+        <section id="education">
+            <div class="flex-center gap-10">
+                <img src="./assets/icons/education.png">
+                <h2>Education</h2>
+            </div>
+            <div>
+                <ul class="progress-line">
+                    <li>
+                        <p class="red-color">Sep 2017 - Dec 2022</p>
+                        <h3 class="yellow-color font-500">Bachelor of Science in Computing Science from the University of Alberta</h3>
+                        <h4 class="font-500">Specialization in Computing Science complemented by a minor in Business.</h4>
+                    </li>
+                </ul>
+                <ul class="progress-line">
+                    <li>
+                        <p class="red-color">March 2024</p>
+                        <h3 class="yellow-color font-500">C# .NET Core 8 with MS SQL Complete Beginner to Master (Udemy), 2024</h3>
+                        <h4 class="font-500">Received certification in March of 2024.</h4>
+                    </li>
+                </ul>
+                <ul class="progress-line">
+                    <li>
+                        <p class="red-color">August 2023</p>
+                        <h3 class="yellow-color font-500">Python From Scratch & Selenium WebDriver QA Automation (Udemy), 2023</h3>
+                        <h4 class="font-500">Received certification in August of 2023.</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-center gap-10" style="padding-top: 50px;">
+                <img src="./assets/icons/language.png">
+                <h2>Languages</h2>
+            </div>
+            <div style="padding-top: 20px">
+                <h4 class="font-500">English - Fluent</h4>
+                <div class="eng-progress-bar"></div>
+            </div>
+            <div style="padding-top: 20px">
+                <h4 class="font-500">Amharic - Basic</h4>
+                <div class="amharic-progress-bar"></div>
+            </div>
+            <div class="flex-center gap-10" style="padding-top: 50px;">
+                <img src="./assets/icons/hash.png">
+                <h2>Skills</h2>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Web Development:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>JQuery</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Selenium</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Shopify</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Frameworks:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Angular</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Ionic</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>React</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>ASP.NET</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>AWS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Design Programs:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Figma</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Adobe XD</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Adobe Photoshop</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Database Management:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>PHP</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Microsoft SQL Server</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Azure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Version Control:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>Git</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>GitHub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top: 20px">
+                <h3 class="font-500">Package Managers:</h3>
+                <div class="flex-center gap-10" style="padding-top: 10px;">
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>npm</p>
+                        </div>
+                    </div>
+                    <div class="small-grey-pill">
+                        <div class="flex-center">
+                            <p>NuGet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience section. -->
+        <section id="experience">
+            <div class="flex-center gap-10">
+                <img src="./assets/icons/experience.png">
+                <h2>Experience</h2>
+            </div>
+            <div>
+                <ul class="progress-line">
+                    <li>
+                        <p class="red-color">Jun 2020 - Sep 2023</p>
+                        <h3 class="yellow-color font-500">Full-Stack Software Developer - Elev Homes Inc., Edmonton, Alberta, Canada</h3>
+                        <h4 class="font-500">Planning, design and development of a progressive web application aimed at connected students with affordable housing near their unversity or college.</h4>
+                    </li>
+                    <li>
+                        <p class="red-color">Jun 2020 - Dec 2020</p>
+                        <h3 class="yellow-color font-500">Junior Software Intern - Elev Homes Inc., Edmonton, Alberta, Canada</h3>
+                        <h4 class="font-500">Contributed to the prototyping and birth of Elev Homes Inc.</h4>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="flex-center gap-10">
+                <img src="./assets/icons/projects.png">
+                <h2>Projects</h2>
+            </div>
+            <div style="padding-top: 20px;">
+                <h3 class="yellow-color">Personal Portfolio</h3>
+                <p>Developed a static website hosted on GitHub Pages with HTML, CSS, and JavaScript. Designed to be a reflective space for 
+                    personal and professional growth, with a focus on simplicity and minimalism.
+                </p>
+                <div class="flex-center gap-10" style="padding: 20px 0px;">
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/html.png">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/css.png">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/javascript.png">
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/github.png">
+                            <p>GitHub</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/figma.png">
+                            <p>Figma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-div"></div>
+            </div>
+            <div style="padding-top: 20px;">
+                <h3 class="yellow-color">Elev Homes Tenant App</h3>
+                <p>Spearheaded the front-end implementation of a progressive web application. Building this project from the ground up, Elev Homes
+                    is now able to provide students an alternative to university residency.
+                </p>
+                <div class="flex-center gap-10" style="padding: 20px 0px;">
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/html.png">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/css.png">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/typescript.png">
+                            <p>TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/angular.png">
+                            <p>Angular</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/ionic.png">
+                            <p>Ionic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tenant-div"></div>
+            </div>
+            <div style="padding-top: 20px;">
+                <h3 class="yellow-color">Elev Homes Host App</h3>
+                <p>Designed and implemented the Host application, again from the beginning of the process until it's current iteration.
+                    Hosts or Landlords in the housing market can now connect directly to the unversity demographic, opening a different avenue
+                    for business.
+                </p>
+                <div class="flex-center gap-10" style="padding: 20px 0px;">
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/html.png">
+                            <p>HTML</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/css.png">
+                            <p>CSS</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/typescript.png">
+                            <p>TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/angular.png">
+                            <p>Angular</p>
+                        </div>
+                    </div>
+                    <div class="large-grey-pill">
+                        <div class="flex-center gap-5">
+                            <img src="./assets/icons/ionic.png">
+                            <p>Ionic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="host-div"></div>
+            </div>
+        </section>
+    </div>
   </body>
+
+  <footer style="text-align: center;">
+    <p class="font-500" style="font-size: 14px;">Created by Nahome Wolde-Giorgis.</p>
+    <p style="font-size: 14px;">2024.</p>
+  </footer>
+
 </html>
