@@ -76,6 +76,82 @@ h2 {
     }
 }
 
+.mobile-title {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+}
+
+.mobile-tab-bar {
+    bottom: 0;
+    left: 50%;
+    height: 72px;
+    position: fixed;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 50px;
+    background-color: #2E2E2E;
+    transform: translateX(-50%);
+}
+
+.mobile-tab-bar > div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    gap: 32px;
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.active-tab {
+    gap: 16px;
+    width: 123px;
+    display: flex;
+    cursor: pointer;
+    padding: 14px 20px;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #FFF;
+    p {
+        color: #2E2E2E;
+    }
+}
+
+.inactive-tab {
+    cursor: pointer;
+    p {
+        display: none;
+    }
+}
+
+#inactiveAbout {
+    padding-left: 20px;
+}
+
+#inactiveProjects {
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 540px) {
+    .menu {
+        display: none;
+    }
+    .main-container {
+        margin-bottom: 120px !important;
+    }
+}
+
+@media screen and (min-width: 541px) {
+    .mobile-title, .mobile-tab-bar {
+        display: none;
+    }
+}
+
 .main-container {
     width: 60%;
     margin: auto;
