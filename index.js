@@ -22,7 +22,7 @@ function toSection(section, activeTabName, inactiveTabName) {
     const element = document.getElementById(section, activeTabName);
     element.scrollIntoView( { behavior: "smooth" } );
 
-    if (window.screen.width <= 540) {
+    if (window.screen.width <= 820) {
         changeMobileTab(section, activeTabName, inactiveTabName);
     }
 }
