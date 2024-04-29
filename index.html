@@ -22,6 +22,9 @@
             <li onclick="toSection('projects')">Projects</li>
         </ul>
     </div>
+    <div class="mobile-title">
+        <h1>WoldeCode.</h1>
+    </div>
   </header>
 
   <!-- Body component, housing the content of the entire web page. -->
@@ -403,12 +406,113 @@
                 <div class="host-div"></div>
             </div>
         </section>
+
+        <div style="text-align: center;">
+          <p class="font-500" style="font-size: 14px;">Created by Nahome Wolde-Giorgis. <br> Icons by Icons8.</p>
+          <p style="font-size: 14px;">2024.</p>
+        </div>
+        
+        <div class="mobile-tab-bar">
+            <div>
+                <div class="icons">
+                    <!-- About me tab -->
+                    <div id="activeAbout" class="active-tab">
+                        <img id="aboutDark" src="./assets/icons/nav-bar/dark/about-me-dark.png">
+                        <p>About me</p>
+                    </div>
+                    <div id="inactiveAbout" class="inactive-tab" onclick="toSection('aboutMe', 'activeAbout', 'inactiveAbout')">
+                        <img id="aboutWhite" src="./assets/icons/nav-bar/white/about-me-white.png">
+                    </div>
+                    <!-- Education tab -->
+                    <div id="activeEducation" class="active-tab">
+                        <img id="educationDark" src="./assets/icons/nav-bar/dark/education-dark.png">
+                        <p>Education</p>
+                    </div>
+                    <div id="inactiveEducation" class="inactive-tab" onclick="toSection('education', 'activeEducation', 'inactiveEducation')">
+                        <img id="educationWhite" src="./assets/icons/nav-bar/white/education-white.png">
+                    </div>
+                    <!-- Experience tab -->
+                    <div id="activeExperience" class="active-tab">
+                        <img id="experienceDark" src="./assets/icons/nav-bar/dark/experience-dark.png">
+                        <p>Experience</p>
+                    </div>
+                    <div id="inactiveExperience" class="inactive-tab" onclick="toSection('experience', 'activeExperience', 'inactiveExperience')">
+                        <img id="experienceWhite" src="./assets/icons/nav-bar/white/experience-white.png">
+                    </div>
+                    <!-- Projects tab -->
+                    <div id="activeProjects" class="active-tab">
+                        <img id="projectsDark" src="./assets/icons/nav-bar/dark/projects-dark.png">
+                        <p>Projects</p>
+                    </div>
+                    <div id="inactiveProjects" class="inactive-tab" onclick="toSection('projects', 'activeProjects', 'inactiveProjects')">
+                        <img id="projectsWhite" src="./assets/icons/nav-bar/white/projects-white.png">
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="educationTab">
+                <div class="icons">
+                    <div class="inactive-tab" onclick="toSection('aboutMe', 'aboutTab')">
+                        <img src="./assets/icons/nav-bar/white/about-me-white.png">
+                        <p>About me</p>
+                    </div>
+                    <div class="active-tab" onclick="toSection('education', 'educationTab')">
+                        <img src="./assets/icons/nav-bar/dark/education-dark.png">
+                        <p>Education</p>
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('experience', 'experienceTab')">
+                        <img src="./assets/icons/nav-bar/white/experience-white.png">
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('projects', 'projectsTab')">
+                        <img src="./assets/icons/nav-bar/white/projects-white.png">
+                    </div>
+                </div>
+            </div>
+            <div id="experienceTab">
+                <div class="icons">
+                    <div class="active-tab" onclick="toSection('aboutMe', 'aboutTab')">
+                        <img src="./assets/icons/nav-bar/dark/about-me-dark.png">
+                        <p>About me</p>
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('education', 'educationTab')">
+                        <img src="./assets/icons/nav-bar/white/education-white.png">
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('experience', 'experienceTab')">
+                        <img src="./assets/icons/nav-bar/white/experience-white.png">
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('projects', 'projectsTab')">
+                        <img src="./assets/icons/nav-bar/white/projects-white.png">
+                    </div>
+                </div>
+            </div>
+            <div id="projectsTab">
+                <div class="icons">
+                    <div class="active-tab" onclick="toSection('aboutMe', 'aboutTab')">
+                        <img src="./assets/icons/nav-bar/dark/about-me-dark.png">
+                        <p>About me</p>
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('education', 'educationTab')">
+                        <img src="./assets/icons/nav-bar/white/education-white.png">
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('experience', 'experienceTab')">
+                        <img src="./assets/icons/nav-bar/white/experience-white.png">
+                    </div>
+                    <div class="inactive-tab" onclick="toSection('projects', 'projectsTab')">
+                        <img src="./assets/icons/nav-bar/white/projects-white.png">
+                    </div>
+                </div>
+            </div> -->
+            <!-- <ul class="menu-items">
+                <li onclick="toSection('aboutMe')">About me</li>
+                <li onclick="toSection('education')">Education</li>
+                <li onclick="toSection('experience')">Experience</li>
+                <li onclick="toSection('projects')">Projects</li>
+            </ul> -->
+        </div>
     </div>
+    
+
+    
   </body>
 
-  <footer style="text-align: center;">
-    <p class="font-500" style="font-size: 14px;">Created by Nahome Wolde-Giorgis.</p>
-    <p style="font-size: 14px;">2024.</p>
-  </footer>
 
 </html>
