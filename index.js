@@ -21,6 +21,13 @@ window.addEventListener("load", (event) => {
 function toSection(section, activeTabName, inactiveTabName) {
     const element = document.getElementById(section, activeTabName);
     element.scrollIntoView( { behavior: "smooth" } );
+
+    if (window.screen.width <= 540) {
+        changeMobileTab(section, activeTabName, inactiveTabName);
+    }
+}
+
+function changeMobileTab(section, activeTabName, inactiveTabName) {
     document.getElementById(currentTabInactive).style.display = "block";
     document.getElementById(inactiveTabName).style.display = "none";
 
