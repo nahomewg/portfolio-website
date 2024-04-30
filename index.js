@@ -1,52 +1,41 @@
 // Index Javascript file, housing the functions of the web page
 window.addEventListener("load", (event) => {
-    currentSection = "aboutMe";
-    currentTab = "activeAbout";
-    currentTabInactive = "inactiveAbout";
+    sections = document.querySelectorAll("section");
+    navTab = document.querySelectorAll("nav .icons div");
+    currentTab = document.querySelectorAll("nav .icons div.active");
 
-    // retrieve all active tab elements
-    document.getElementById("inactiveAbout").style.display = "none";
-    var tempActiveElements = document.getElementsByClassName("active-tab");
-    activeElements = Array.from(tempActiveElements);
-    activeElements.forEach(element => {
-        if (element.id != currentTab) {
-            element.style.display = "none";
+    window.addEventListener("scroll", (event) => {
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 150 && window.scrollY <= sectionTop + 150) {
+                    currentTab = section.getAttribute("id");
+                }
+            });
         }
-    });
-    var tempInactiveElements = document.getElementsByClassName("inactive-tab");
-    inactiveElements = Array.from(tempInactiveElements);
-  });
+    )
+    window.addEventListener("scrollend", (event) => {
+        changeMobileTab(currentTab);
+    })
+});
+
 
 // Scroll to function, to smoothly navigate through the web page.
-function toSection(section, activeTabName, inactiveTabName) {
-    const element = document.getElementById(section, activeTabName);
+function toSection(section, tabId) {
+    const element = document.getElementById(section);
     element.scrollIntoView( { behavior: "smooth" } );
 
-    if (window.screen.width <= 540) {
-        changeMobileTab(section, activeTabName, inactiveTabName);
+    if (window.screen.width <= 820) {
+        changeMobileTab(tabId);
     }
 }
 
-function changeMobileTab(section, activeTabName, inactiveTabName) {
-    document.getElementById(currentTabInactive).style.display = "block";
-    document.getElementById(inactiveTabName).style.display = "none";
-
-    inactiveElements.forEach(element => {
-        if (element.id == activeTabName) {
-            element.style.display = "block";
-        }
-    })
-    activeElements.forEach(element => {
-        if (element.id == currentTab) {
-            element.style.display = "none";
-        }
-        if (element.id == activeTabName) {
-            element.style.display = "flex";
+function changeMobileTab(tabId) {
+    navTab.forEach((tab) => {
+        tab.classList.remove("active");
+        if (tab.id === tabId) {
+            tab.classList.add("active");
         }
     });
-    currentSection = section;
-    currentTab = activeTabName;
-    currentTabInactive = inactiveTabName;
 }
 
 // Function to open the various links on the web page. 

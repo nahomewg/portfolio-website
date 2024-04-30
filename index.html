@@ -16,7 +16,7 @@
   <header>
     <div class="menu">
         <ul class="menu-items">
-            <li onclick="toSection('aboutMe')">About me</li>
+            <li onclick="toSection('about')">About me</li>
             <li onclick="toSection('education')">Education</li>
             <li onclick="toSection('experience')">Experience</li>
             <li onclick="toSection('projects')">Projects</li>
@@ -32,7 +32,7 @@
     <!-- Main container, housing the width of the entire web page. -->
     <div class="main-container">
         <!-- About me section. -->
-        <section id="aboutMe">
+        <section id="about">
             <div class="avatar"></div>
             <div class="flex-center gap-10">
                 <h1>Hey, I am Nahome</h1>
@@ -413,47 +413,32 @@
         </div>
         
         <div class="mobile-tab-bar">
-            <div>
+            <nav>
                 <div class="icons">
                     <!-- About me tab -->
-                    <div id="activeAbout" class="active-tab">
-                        <img id="aboutDark" src="./assets/icons/nav-bar/dark/about-me-dark.png">
+                    <div id="about" class="nav-tab active" onclick="toSection('about', id)">
+                        <img src="./assets/icons/nav-bar/about-me.png">
                         <p>About me</p>
                     </div>
-                    <div id="inactiveAbout" class="inactive-tab" onclick="toSection('aboutMe', 'activeAbout', 'inactiveAbout')">
-                        <img id="aboutWhite" src="./assets/icons/nav-bar/white/about-me-white.png">
-                    </div>
                     <!-- Education tab -->
-                    <div id="activeEducation" class="active-tab">
-                        <img id="educationDark" src="./assets/icons/nav-bar/dark/education-dark.png">
+                    <div id="education" class="nav-tab" onclick="toSection('education', id)">
+                        <img src="./assets/icons/nav-bar/education.png">
                         <p>Education</p>
                     </div>
-                    <div id="inactiveEducation" class="inactive-tab" onclick="toSection('education', 'activeEducation', 'inactiveEducation')">
-                        <img id="educationWhite" src="./assets/icons/nav-bar/white/education-white.png">
-                    </div>
                     <!-- Experience tab -->
-                    <div id="activeExperience" class="active-tab">
-                        <img id="experienceDark" src="./assets/icons/nav-bar/dark/experience-dark.png">
+                    <div id="experience" class="nav-tab" onclick="toSection('experience', id)">
+                        <img src="./assets/icons/nav-bar/experience.png">
                         <p>Experience</p>
                     </div>
-                    <div id="inactiveExperience" class="inactive-tab" onclick="toSection('experience', 'activeExperience', 'inactiveExperience')">
-                        <img id="experienceWhite" src="./assets/icons/nav-bar/white/experience-white.png">
-                    </div>
                     <!-- Projects tab -->
-                    <div id="activeProjects" class="active-tab">
-                        <img id="projectsDark" src="./assets/icons/nav-bar/dark/projects-dark.png">
+                    <div id="projects" class="nav-tab" onclick="toSection('projects', id)">
+                        <img src="./assets/icons/nav-bar/projects.png">
                         <p>Projects</p>
                     </div>
-                    <div id="inactiveProjects" class="inactive-tab" onclick="toSection('projects', 'activeProjects', 'inactiveProjects')">
-                        <img id="projectsWhite" src="./assets/icons/nav-bar/white/projects-white.png">
-                    </div>
                 </div>
-            </div>
+            </nav>
         </div>
     </div>
-    
-
-    
   </body>
 
 
