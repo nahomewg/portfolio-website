@@ -306,3 +306,11 @@ section {
     background-repeat: no-repeat;
     background-image: url('/assets/images/elev_host_app.png');
 }
+
+.fluffy-div {
+    height: 0;
+    padding-bottom: 75.27%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/fluffys.png');
+}
